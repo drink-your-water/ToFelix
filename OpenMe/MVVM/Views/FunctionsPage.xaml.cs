@@ -69,7 +69,7 @@ public partial class FunctionsPage : ContentPage
     private async void OnPopKereenClicked(object sender, EventArgs e)
     {
         await FadeOutMusicAsync();
-        var popup = new PopKereen(player);
+        var popup = new PopKereen();
         popup.Closed += async (s, args) => await FadeInMusicAsync();
         this.ShowPopup(popup);
     }

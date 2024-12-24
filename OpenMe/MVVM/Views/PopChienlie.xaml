@@ -3,10 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
              x:Class="OpenMe.MVVM.Views.PopChienlie"
-           CanBeDismissedByTappingOutsideOfPopup="True">
+           CanBeDismissedByTappingOutsideOfPopup="True"
+           Size="700,700">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Hi Felix, its been a great year with you, I learnt a lot from you and youve been a great friend.\n I hope we can continue getting along for the next and coming years. Merry Christmas and Happy Birthday /n
+your ni Your Friend,
+       Chienlie
+minus nala an your ni"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>

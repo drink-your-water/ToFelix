@@ -2,9 +2,15 @@
 <mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
            xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+           xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
            x:Class="OpenMe.MVVM.Views.PopKereen"
-           CanBeDismissedByTappingOutsideOfPopup="True">
+           CanBeDismissedByTappingOutsideOfPopup="True"
+           Size="700,700">
     <VerticalStackLayout>
+        <toolkit:MediaElement
+            HeightRequest="500"
+            WidthRequest="500"
+            Source="embed://OpenMe/Resources/Raw/kereen_hbd.mp4"/>
         <Label 
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
