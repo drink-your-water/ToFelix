@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OpenMe.MVVM.Views.FunctionsPage"
+             Title="FunctionsPage"
+             BackgroundColor="White">
+    <Grid>
+        <!-- Background Image -->
+        <Image
+            x:Name="BackgroundImage"
+            Source="felix_stairs.png"
+            Aspect="AspectFill"
+            SemanticProperties.Description="Background image of Felix on the stairs"
+            Opacity="0" />
+
+        <!-- Foreground Content -->
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="10"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+            <Label 
+                Text="This page transition was made thanks to Kereen" 
+                FontSize="24" 
+                TextColor="Black" 
+                HorizontalOptions="Center" />
+
+            <Button 
+                Text="Click Me" 
+                HorizontalOptions="Center" 
+                VerticalOptions="End" />
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
