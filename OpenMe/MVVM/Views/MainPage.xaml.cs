@@ -34,8 +34,8 @@ namespace OpenMe
                 player.Seek(2.0); // Start playback at 2 seconds
                 player.Play();
 
-                // Handle the end of the first song
-                player.PlaybackEnded += OnFirstSongPlaybackEnded;
+                //// Handle the end of the first song
+                //player.PlaybackEnded += OnFirstSongPlaybackEnded;
 
                 // Start the animation for the image enlargement and fading
                 var scaleAnimation = image.ScaleTo(6.0, 6000, Easing.CubicInOut); // Enlarge the image
@@ -49,23 +49,23 @@ namespace OpenMe
             }
         }
 
-        private async void OnFirstSongPlaybackEnded(object? sender, EventArgs e)
-        {
-            if (player != null)
-            {
-                // Unsubscribe from the event before disposing of the player
-                player.PlaybackEnded -= OnFirstSongPlaybackEnded;
+        //private async void OnFirstSongPlaybackEnded(object? sender, EventArgs e)
+        //{
+        //    if (player != null)
+        //    {
+        //        // Unsubscribe from the event before disposing of the player
+        //        player.PlaybackEnded -= OnFirstSongPlaybackEnded;
 
-                // Dispose of the current player
-                player.Dispose();
-                player = null;
-            }
+        //        // Dispose of the current player
+        //        player.Dispose();
+        //        player = null;
+        //    }
 
-            // Create and start the second audio player
-            player = Plugin.Maui.Audio.AudioManager.Current.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("birthday_jazz.mp3"));
-            player.Loop = true; // Set the second song to loop
-            player.Play();
-        }
+        //    // Create and start the second audio player
+        //    player = Plugin.Maui.Audio.AudioManager.Current.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("birthday_jazz.mp3"));
+        //    player.Loop = true; // Set the second song to loop
+        //    player.Play();
+        //}
     }
 
     public partial class MainPageViewModel : INotifyPropertyChanged
@@ -87,7 +87,7 @@ namespace OpenMe
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

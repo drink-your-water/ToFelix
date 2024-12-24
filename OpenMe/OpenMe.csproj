@@ -57,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="9.1.1" />
 		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="4.1.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
@@ -69,7 +70,49 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="MVVM\Views\PopChienlie.xaml.cs">
+	    <DependentUpon>PopChienlie.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="MVVM\Views\PopGian.xaml.cs">
+	    <DependentUpon>PopGian.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="MVVM\Views\PopVal.xaml.cs">
+	    <DependentUpon>PopVal.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="MVVM\Views\PopZachary.xaml.cs">
+	    <DependentUpon>PopZachary.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="MVVM\Views\PopArjay.xaml.cs">
+	    <DependentUpon>PopArjay.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="MVVM\Views\PopAris.xaml.cs">
+	    <DependentUpon>PopAris.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="MVVM\Views\FunctionsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\PopChienlie.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\PopGian.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\PopVal.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\PopArjay.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\PopZachary.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\PopAris.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\PopKereen.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -4,6 +4,38 @@
              x:Class="OpenMe.MVVM.Views.FunctionsPage"
              Title="FunctionsPage"
              BackgroundColor="White">
+    <ContentPage.Resources>
+        <Style x:Key="CircleImageButton" TargetType="ImageButton">
+            <Setter Property="WidthRequest" Value="100" />
+            <Setter Property="HeightRequest" Value="100" />
+            <Setter Property="CornerRadius" Value="50" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="Opacity" Value="0.7" />
+            <Setter Property="Shadow">
+                <Setter.Value>
+                    <Shadow Brush="Black" Opacity="0.5" Offset="5,5" />
+                </Setter.Value>
+            </Setter>
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <Setter.Value>
+                    <VisualStateGroupList>
+                        <VisualStateGroup>
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Opacity" Value="0.7" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="PointerOver">
+                                <VisualState.Setters>
+                                    <Setter Property="Opacity" Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
     <Grid>
         <!-- Background Image -->
         <Image
@@ -12,23 +44,62 @@
             Aspect="AspectFill"
             SemanticProperties.Description="Background image of Felix on the stairs"
             Opacity="0" />
-
         <!-- Foreground Content -->
-        <VerticalStackLayout
+        <Grid
             Padding="20"
-            Spacing="10"
             VerticalOptions="Center"
-            HorizontalOptions="Center">
-            <Label 
-                Text="This page transition was made thanks to Kereen" 
-                FontSize="24" 
-                TextColor="Black" 
+            HorizontalOptions="Start"
+            RowDefinitions="Auto, 200, Auto"
+            ColumnDefinitions="Auto, Auto, Auto, Auto">
+            <Label
+                Grid.Row="0"
+                Grid.ColumnSpan="4"
+                Text="This page transition was made thanks to Kereen"
+                FontSize="24"
+                TextColor="White"
                 HorizontalOptions="Center" />
-
-            <Button 
-                Text="Click Me" 
-                HorizontalOptions="Center" 
-                VerticalOptions="End" />
-        </VerticalStackLayout>
+            <ImageButton
+                Grid.Row="1"
+                Grid.Column="0"
+                Source="pop_aris.png"
+                Clicked="OnPopArisClicked"
+                Style="{StaticResource CircleImageButton}" />
+            <ImageButton
+                Grid.Row="1"
+                Grid.Column="1"
+                Source="pop_kereen.png"
+                Clicked="OnPopKereenClicked"
+                Style="{StaticResource CircleImageButton}" />
+            <ImageButton
+                Grid.Row="1"
+                Grid.Column="2"
+                Source="pop_gian.png"
+                Clicked="OnPopGianClicked"
+                Style="{StaticResource CircleImageButton}" />
+            <ImageButton
+                Grid.Row="2"
+                Grid.Column="0"
+                Source="pop_val.png"
+                Clicked="OnPopValClicked"
+                Style="{StaticResource CircleImageButton}" />
+            <ImageButton
+                Grid.Row="2"
+                Grid.Column="1"
+                Source="pop_zachary.png"
+                Clicked="OnPopZacharyClicked"
+                Style="{StaticResource CircleImageButton}" />
+            <ImageButton
+                Grid.Row="2"
+                Grid.Column="2"
+                Source="pop_arjay.png"
+                Clicked="OnPopArjayClicked"
+                Style="{StaticResource CircleImageButton}" />
+            <ImageButton
+                Grid.Row="2"
+                Grid.Column="3"
+                Source="pop_chienlie.png"
+                Clicked="OnPopChienlieClicked"
+                Style="{StaticResource CircleImageButton}" />
+        </Grid>
     </Grid>
 </ContentPage>
