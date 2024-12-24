@@ -61,8 +61,6 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
-<<<<<<< HEAD
-=======
 		<PackageReference Include="Plugin.Maui.Audio" Version="3.0.1" />
 	</ItemGroup>
 
@@ -74,7 +72,6 @@
 	  <MauiXaml Update="MVVM\Views\FunctionsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
->>>>>>> 7638ee5 (Completed Main page and started 2nd page.)
 	</ItemGroup>
 
 </Project>

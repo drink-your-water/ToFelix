@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-﻿namespace OpenMe
-{
-    public partial class MainPage : ContentPage
-    {
-        int count = 0;
-=======
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using OpenMe.MVVM.Views;
 using Plugin.Maui.Audio;
@@ -16,29 +9,9 @@ namespace OpenMe
     {
         private IAudioPlayer? player; // Make player nullable
         private bool isImageTapped = false; // Add a flag to track if the image has been tapped
->>>>>>> 7638ee5 (Completed Main page and started 2nd page.)
-
         public MainPage()
         {
             InitializeComponent();
-<<<<<<< HEAD
-        }
-
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
-        }
-    }
-
-}
-=======
             BindingContext = new MainPageViewModel();
         }
 
@@ -120,4 +93,3 @@ namespace OpenMe
         }
     }
 }
->>>>>>> 7638ee5 (Completed Main page and started 2nd page.)

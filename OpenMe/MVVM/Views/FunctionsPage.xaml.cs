@@ -11,7 +11,7 @@ public partial class FunctionsPage : ContentPage
     private async Task SetBackgroundImageAsync()
     {
         await Task.Delay(500);
-        var backgroundImage = this.FindByName<Image>("BackgroundImage");
+        var backgroundImage = (Image)this.FindByName("BackgroundImage");
         backgroundImage.Source = "felix_stairs.png";
         await backgroundImage.FadeTo(1, 1000);
     }
